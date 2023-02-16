@@ -12,7 +12,7 @@ static GAMES: Mutex<u32> = Mutex::new(0);
 /// Compares the moves against each other and increments the wins, losses and games
 fn compare() -> String {
     let usermove: String = get_input();
-    let pcmove: String = generate().to_owned();
+    let pcmove: String = generate();
 
     //-1 for a loss, 0 for a tie, 1 for a win
     let mut _win: i8 = 0;
@@ -53,8 +53,8 @@ fn compare() -> String {
 }
 
 /// Generates a move for the PC
-fn generate() -> &'static str {
-    let r#move: &str = MOVES[rand::thread_rng().gen_range(0..=2)];
+fn generate() -> String {
+    let r#move: String = MOVES[rand::thread_rng().gen_range(0..=2)].to_owned();
     r#move
 }
 
@@ -69,7 +69,6 @@ fn get_input() -> String {
             println!("invalid move. Choose rock, paper or scissors.");
         } else {
             input = input.trim().to_owned();
-            input = input.to_string();
             break input;
         }
     }
