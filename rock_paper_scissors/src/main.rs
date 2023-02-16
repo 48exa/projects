@@ -106,7 +106,7 @@ fn main() {
             };
         }
 
-        println!("Choose! (r)ock, (p)aper, (s)cissors");
+        println!("Choose! rock, paper, scissors");
         let pcmove: String = compare();
 
         match pcmove.as_str() {
