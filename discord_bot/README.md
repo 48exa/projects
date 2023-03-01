@@ -6,3 +6,5 @@ Experimenting with my own Discord bot named 'Pillar'.
  - id command (responds with your user id)
 
 more to come!
+
+make sure to run `npm i discord.js` if you want to use this
