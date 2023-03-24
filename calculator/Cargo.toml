@@ -5,4 +5,13 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+build = "build.rs"
+
 [dependencies]
+
+[build-dependencies]
+winres = "0.1.12"
+
+[package.metadata.winres]
+OriginalFilename = "PROGRAM.EXE"
+LegalCopyright = "Copyright © 2016"
