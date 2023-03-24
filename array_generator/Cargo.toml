@@ -1,0 +1,19 @@
+[package]
+name = "array_generator"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+build = "build.rs"
+
+[dependencies]
+colored = "2.0.0"
+enable-ansi-support = "0.2.1"
+
+[build-dependencies]
+winres = "0.1.12"
+
+[package.metadata.winres]
+OriginalFilename = "string_splitter.exe"
+LegalCopyright = "Copyright © 2023"
